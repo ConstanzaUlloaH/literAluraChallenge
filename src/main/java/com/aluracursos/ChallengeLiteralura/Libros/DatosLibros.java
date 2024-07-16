@@ -1,4 +1,4 @@
-package com.aluracursos.ChallengeLiteralura.service;
+package com.aluracursos.ChallengeLiteralura.Libros;
 
 import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;

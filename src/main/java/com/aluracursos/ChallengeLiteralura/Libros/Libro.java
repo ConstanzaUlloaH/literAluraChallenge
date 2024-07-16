@@ -1,12 +1,7 @@
-package com.aluracursos.ChallengeLiteralura;
+package com.aluracursos.ChallengeLiteralura.Libros;
 
 
-import com.aluracursos.ChallengeLiteralura.service.DatosAutor;
-import com.aluracursos.ChallengeLiteralura.service.DatosLibros;
-import com.aluracursos.ChallengeLiteralura.service.DatosResults;
 import jakarta.persistence.*;
-
-import java.util.List;
 
 
 @Entity
@@ -16,7 +11,7 @@ public class Libro {
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
     private Long id;
     private String titulo;
-//    @OneToMany()
+    //    @OneToMany()
 //    private List<DatosAutor> autor;
     @ManyToOne
     @JoinColumn(name = "autor_id")
@@ -24,26 +19,28 @@ public class Libro {
     private String idioma;
     private Integer cantidadDescargas;
 
+
+    public Libro() {
+    }
+
     public Libro(DatosLibros datos) {
         if (datos.autor() != null && !datos.autor().isEmpty()) {
             this.autor = new Autor(datos.autor().get(0)); // Considera solo el primer autor
         }
         this.titulo = datos.titulo();
-        this.idioma = String.join(", ", datos.idioma()); // ["en", "fr"] --> "end, fr"
+        this.idioma = String.join(", ", datos.idioma()); // ["en", "fr"] --> "en, fr"
 
         this.cantidadDescargas = datos.numeroDescargas();
     }
 
-//    public Libro(DatosResults datosLibros) {
-//    }
+
 
     @Override
     public String toString() {
-        return "datosLibro " +
-                "titulo=" + titulo +
-                ", autor=" + autor +
-                ", idioma=" + idioma +
-                ", cantidadDescargas=" + cantidadDescargas ;
+        return   "Titulo = " + titulo + ", "+
+                autor +
+                ", Idioma = " + idioma +
+                ", Cantidad de descargas = " + cantidadDescargas ;
     }
 
     public Long getId() {

@@ -1,7 +1,5 @@
 package com.aluracursos.ChallengeLiteralura.service;
 
-
-
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
@@ -12,8 +10,6 @@ public class ConsultaAPI {
     }
 
     public String obtenerDatos(String url) {
-//        String direccion = "https://gutendex.com/books/?search=";
-//        URI direcccion = URI.create(direccion + titulo.replace(" ", "%20"));
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create(url)).build();

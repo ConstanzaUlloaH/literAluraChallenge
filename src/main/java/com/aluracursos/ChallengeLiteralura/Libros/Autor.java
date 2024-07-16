@@ -1,9 +1,7 @@
-package com.aluracursos.ChallengeLiteralura;
+package com.aluracursos.ChallengeLiteralura.Libros;
 
-import com.aluracursos.ChallengeLiteralura.service.DatosAutor;
 import jakarta.persistence.*;
 
-import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -15,8 +13,7 @@ public class Autor {
     private String nombre;
     private Integer fechaNacimiento;
     private Integer fechaFallecimiento;
-//    @OneToMany(mappedBy = "autor", cascade = CascadeType.ALL)
-//    private List<Libro> libro;
+
 
     @OneToMany(mappedBy = "autor", cascade = CascadeType.ALL)
     private List<Libro> libros;
@@ -73,9 +70,8 @@ public class Autor {
 
     @Override
     public String toString() {
-        return "Autor" +
-                "nombbre " + nombre  +
-                ", fechaNacimiento " + fechaNacimiento +
-                ", fechaFallecimiento " + fechaFallecimiento ;
+        return "Nombre = " + nombre  +
+                ", Fecha de nacimiento = " + fechaNacimiento +
+                ", Fecha de fallecimiento = " + fechaFallecimiento ;
     }
 }

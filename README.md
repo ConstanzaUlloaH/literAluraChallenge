@@ -6,7 +6,7 @@ En este proyecto, he desarrollado LiterAlura, un Catálogo de Libros interactivo
 
 ## Qué he aprendido
 
-Este proyecto me ha permitido aplicar y reforzar mis conocimientos en desarrollo Java con Spring Boot, manejo de APIs RESTful, manipulación de datos JSON, y persistencia de datos utilizando Spring Data JPA con PostgreSQL. Además, he practicado metodologías ágiles de desarrollo y he utilizado Trello para gestionar eficazmente las tareas y el progreso del proyecto.
+Este proyecto me ha permitido aplicar y reforzar mis conocimientos en desarrollo Java con Spring Boot, manejo de APIs RESTful, manipulación de datos JSON, y persistencia de datos utilizando Spring Data JPA con PostgreSQL. 
 
 
 ## Dependencias utilizadas
